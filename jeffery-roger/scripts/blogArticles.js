@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// This is an array of Objects, these objects are then passed into a constructor function. The new object has key value pairs that are used to populate the blog site.
 
 let rawData = [
   {
