@@ -1,0 +1,50 @@
+.main-nav ul {
+  display: none;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+}
+ .main-nav ul li {
+  border-bottom: 1px solid #777;
+ }
+.main-nav ul li a {
+  text-decoration: none;
+  color: #777;
+}
+
+.icon-menu {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  font-size: 3rem;
+}
+.main-nav:hover ul{
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: block;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+  }
+
+  .main-nav ul li {
+    display: inline;
+    border: none;
+    padding: .5rem;
+  }
+}
+
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  img.pull-right, img.pull-left {
+    width: 50%;
+  }
+
+}

@@ -1,0 +1,46 @@
+.site-header {
+  background-color: #feeaa9;
+  padding: 0.5rem;
+
+}
+
+.byline {
+  color: #777;
+
+}
+
+.byline a {
+  font-style: italic;
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+}
+address {
+  display: inline-block;
+}
+address a {
+  color: #777;
+  text-decoration: none;
+}
+img.pull-right, img.pull-left {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+
+
+  img.pull-right, img.pull-left {
+    display: initial;
+    width:inherit;
+  }
+  img.pull-right {
+    float: right;
+  }
+  img.pull-left {
+    float: left;
+  }
+
+}
