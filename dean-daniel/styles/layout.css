@@ -30,3 +30,7 @@ a:hover, a:active {
   text-decoration: underline;
   color: gray;
 }
+
+div.icon-menu::before {
+  float: right;
+}

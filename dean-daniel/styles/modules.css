@@ -27,7 +27,7 @@
   }
 
   .main-nav ul li{
-    display: inline-block;
+    display: inline;
     border-bottom: none;
     margin-left: 40px;
   }
