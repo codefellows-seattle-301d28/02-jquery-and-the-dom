@@ -1,0 +1,26 @@
+/* Mobile App Styles */
+
+@media only screen and (min-width: 641px), only screen and (min-device-width: 641px) {
+
+  .icon-menu {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+
+  .icon-menu {
+    display: block;
+  }
+
+  .menu-item {
+    display: none;
+  }
+
+  .main-nav:hover .menu-item {
+    display: block;
+  }
+
+
+}
