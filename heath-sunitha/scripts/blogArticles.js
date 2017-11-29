@@ -2,6 +2,7 @@
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
 // PUT YOUR RESPONSE HERE
+// this data is used to be added to a Constructor function which we will then used to add to the DOM.
 
 let rawData = [
   {
