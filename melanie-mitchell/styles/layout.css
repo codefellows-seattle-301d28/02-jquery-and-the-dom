@@ -1,0 +1,53 @@
+.site-header {
+  position: relative;
+  background-color: #FFEAA9;
+  color: #000;
+
+}
+
+.heading-group-h1 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+
+.main-nav {
+  /*background-color: #FFEAA9;*/
+  clear: both;
+}
+
+.icon-menu {
+  font-size: 70px;
+  position: absolute;
+  /*float: right;*/
+  top: 0;
+  right: 0;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.byline {
+  color: grey;
+}
+
+.byline address, .byline time {
+  display: inline-block;
+}
+
+.byline a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.article-body img {
+  float: right;
+}
+
+footer{
+  background-color: #FFEAA9;
+  color: #000;
+  padding: 20px;
+  text-align: center;
+}
