@@ -1,0 +1,32 @@
+/* APP STYLES */
+
+.main-nav-mobile {
+  display: none;
+}
+
+.main-nav {
+  display: block;
+}
+
+img {
+  float: right;
+  max-width: 98%;
+}
+
+.byline, .byline * {
+  color: #444;
+  display: inline-block;
+}
+
+.byline a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-header {
+  padding: 20px;
+  background: #ffebaa;
+}
+.template {
+  display: none;
+}
