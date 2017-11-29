@@ -19,7 +19,7 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
   // DONE: What is the benefit of cloning the article? (see the jQuery docs)
-  // It sets us up with the base template of the HTML for the article... h1s, divs, etc. 
+  // It sets us up with the base template of the HTML for the article... h1s, divs, etc.
 
   let $newArticle = $('article.template').clone();
   /* DONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
@@ -34,14 +34,14 @@ Article.prototype.toHtml = function() {
       3. article title,
       4. article body, and
       5. publication date. */
-  $newArticle.$('h1').text(this.title);
-  $newArticle.$('a').attr('href', this.authorUrl);
-  $newArticle.$('a').text(this.author);
-  $newArticle.$('.article-body').text(this.body);
-  $newArticle.$('time').attr('datetime', this.publishedOn)
+  $newArticle.find('h1').text(this.title);
+  $newArticle.find('a').attr('href', this.authorUrl);
+  $newArticle.find('a').text(this.author);
+  $newArticle.find('.article-body').html(this.body);
+  //$newArticle.find('time').attr('datetime', this.publishedOn)
   $newArticle.removeClass('template').addClass('published')
   // REVIEW: Display the date as a relative number of 'days ago'
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago (' + this.publishedOn + ')');
   $newArticle.append('<hr>');
   return $newArticle;
 };
@@ -53,16 +53,18 @@ rawData.sort(function(a,b) {
 
 // DONE: Refactor these for loops using the .forEach() array method.
 
-rawData.forEach(function(i) {
-  articles.push(new Article(rawData[i]));
+rawData.forEach(function(currentArt) {
+  //console.log(rawData[i]);
+  //console.log(c);
+  articles.push(new Article(currentArt));
 });
 
 // for(let i = 0; i < rawData.length; i++) {
 //   articles.push(new Article(rawData[i]));
 // }
 
-rawData.forEach(function(i) {
-  $('#articles').append(articles[i].toHtml());
+articles.forEach(function(currentArt) {
+  $('#articles').append(currentArt.toHtml());
 });
 
 // for(let i = 0; i < articles.length; i++) {
