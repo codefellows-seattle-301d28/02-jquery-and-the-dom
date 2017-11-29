@@ -2,13 +2,9 @@
   background-color: #fceab2;
 }
 
-.main-nav {
-  position: relative;
-}
-
 .icon-menu {
   position: absolute;
-  top: -200px;
+  top: 0px;
   right: 1px;
 }
 
