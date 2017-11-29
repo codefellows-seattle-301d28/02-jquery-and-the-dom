@@ -56,25 +56,24 @@ rawData.sort(function(a,b) {
 });
 
 //TODO: Refactor these for loops using the .forEach() array method.
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i]));
-}
- 
-for(let i = 0; i < articles.length; i++) {
-  $('#articles').append(articles[i].toHtml());
-}
-
-
-// function pushArticle(newrawData) {
-//   articles.push(new Article(newrawData));
+// for(let i = 0; i < rawData.length; i++) {
+//   articles.push(new Article(rawData[i]));
 // }
 
-// rawData.forEach(pushArticle);
-
-
-
-// function appendArticle() {
-//   $('#articles').append(articles.toHtml());
+// for(let i = 0; i < articles.length; i++) {
+//   $('#articles').append(articles[i].toHtml());
 // }
 
-// articles.forEach(appendArticle);
+// creates the article
+function pushArticle(newrawData) {
+  articles.push(new Article(newrawData));
+}
+
+rawData.forEach(pushArticle);
+
+// pushing to the html page
+function appendArticle(value) {
+  $('#articles').append(value.toHtml());
+}
+
+articles.forEach(appendArticle);
