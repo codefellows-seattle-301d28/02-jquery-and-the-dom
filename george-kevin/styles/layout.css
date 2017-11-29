@@ -6,7 +6,7 @@
 
 .main-nav div{
   position: absolute;
-  top: 25px;
+  top: 5px;
   right: 10px;
   font-size: 45px;
 }
@@ -16,7 +16,8 @@ h1 {
 }
 
 .site-header {
-  background-color: rgb(250, 234, 171)
+  background-color: rgb(250, 234, 171);
+  padding: 15px;
 }
 
 a:link, a:visited {

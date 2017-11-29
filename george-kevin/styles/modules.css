@@ -15,6 +15,10 @@
   padding-bottom: 200px;
 }
 
+.template {
+  display: none;
+}
+
 @media screen and (min-width: 640px){
   .main-nav div{
     display: none;
@@ -30,8 +34,10 @@
     border-bottom: none;
     margin-left: 40px;
   }
-}
 
-.template {
-  display: none;
+  article, .article-body img {
+    width:95vw;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
 }
