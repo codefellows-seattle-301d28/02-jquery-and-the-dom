@@ -1,0 +1,76 @@
+.site-header {
+  background-color: #fceab2;
+}
+
+.main-nav {
+  position: relative;
+}
+
+.icon-menu {
+  position: absolute;
+  top: -200px;
+  right: 1px;
+}
+
+.heading-group-h1 {
+  padding-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  margin-left: 20px;
+  padding-top: 20px;
+  margin-top: 0px;
+  font-size: 50px;
+}
+
+h2 {
+  margin-left: 20px;
+  font-size: 36px;
+}
+
+.byline {
+  display: inline-block;
+}
+
+.main-nav ul li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+
+.main-nav ul {
+  margin-left: -35px;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+.main-nav ul li {
+  padding-bottom: 15px;
+}
+
+.icon-menu {
+  font-size: 60px;
+}
+
+.icon-home {
+  color: #777;
+  text-decoration: none;
+}
+
+.icon-address-book {
+  color: #777;
+  text-decoration: none;
+}
+
+.icon-twitter3 {
+  color: #777;
+  text-decoration: none;
+}
+
+.icon-github {
+  color: #777;
+  text-decoration: none;
+}
