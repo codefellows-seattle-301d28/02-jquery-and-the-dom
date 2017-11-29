@@ -18,8 +18,8 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
-  // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
+  // DONE: What is the benefit of cloning the article? (see the jQuery docs)
+  // It sets us up with the base template of the HTML for the article... h1s, divs, etc. 
 
   let $newArticle = $('article.template').clone();
   /* TODO: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
@@ -34,7 +34,11 @@ Article.prototype.toHtml = function() {
       3. article title,
       4. article body, and
       5. publication date. */
-
+  $newArticle.$('h1').text(this.title);
+  $newArticle.$('a').attr('href', this.authorUrl);
+  $newArticle.$('a').text(this.author);
+  $newArticle.$('.article-body').text(this.body);
+  $newArticle.$('time').attr('datetime', this.publishedOn)
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');

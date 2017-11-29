@@ -27,3 +27,6 @@ img {
   padding: 20px;
   background: #ffebaa;
 }
+.template {
+  display: none;
+}
