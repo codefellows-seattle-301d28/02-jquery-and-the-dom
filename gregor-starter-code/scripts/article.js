@@ -15,9 +15,6 @@ function Article (rawDataObj) {
   this.authorUrl = rawDataObj.authorUrl;
   this.publishedOn = rawDataObj.publishedOn;
   this.body = rawDataObj.body;
-
-  // console.log(this.title);
-  // console.log(this.category);
 }
 
 Article.prototype.toHtml = function() {
@@ -40,13 +37,14 @@ Article.prototype.toHtml = function() {
       4. article body, and
       5. publication date. */
 
-//  $newArticle.find('h1').text(this.author);
-
   $newArticle.find('.article-body').append(this.body);
   $newArticle.find('h1').text(this.title);
-  $newArticle.find('time').attr("datetime", this.publishedOn);
-  //$newArticle.find('a').text(this.author);
+  $newArticle.find('a').attr('href',this.authorUrl);
+  $newArticle.find('time').attr('datetime', this.publishedOn);
+  $newArticle.find('a').text(this.author);
 
+  $("#articles").append($newArticle);
+  
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
@@ -59,18 +57,19 @@ rawData.sort(function(a,b) {
 
 // DONE: Refactor these for loops using the .forEach() array method.
 
-// rawData.forEach(function(article) {
-//   articles.push(new Article(article));
-// });
+rawData.forEach(function(article) {
+  articles.push(new Article(article));
+});
 
-// articles.forEach(function(article) {
-//   $('#articles').append(article.toHtml());
-// });
+articles.forEach(function(article) {
+  $('#articles').append(article.toHtml());
+  $('#articles').append();
+});
 
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i]));
-}
+// for(let i = 0; i < rawData.length; i++) {
+//   articles.push(new Article(rawData[i]));
+// }
 
-for(let i = 0; i < articles.length; i++) {
-  $('#articles').append(articles[i].toHtml());
-}
+// for(let i = 0; i < articles.length; i++) {
+//   $('#articles').append(articles[i].toHtml());
+// }
