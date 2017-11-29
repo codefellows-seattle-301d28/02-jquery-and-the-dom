@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// The data is originally contained inside an array called rawData. At each index of the array the data is stored in objects. Inside each of these objects are the key value pairs that contain the information we want... such as author: kevin bacon. To get this information displayed on the website we push each object into a new array: articles.
 
 let rawData = [
   {
