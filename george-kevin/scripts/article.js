@@ -9,14 +9,14 @@ let articles = [];
 // The rawDataObj is an array with elements of articles with key and values
 
 function Article (rawDataObj) {
-    // DONE: Use the JS object that is passed in to complete this constructor function:
-    // Save ALL the properties of `rawDataObj` into `this`
-    this.title = rawDataObj.title;
-    this.category = rawDataObj.category;
-    this.author = rawDataObj.author;
-    this.authorUrl = rawDataObj.authorUrl;
-    this.publishedOn = rawDataObj.publishedOn;
-    this.body = rawDataObj.body;
+  // DONE: Use the JS object that is passed in to complete this constructor function:
+  // Save ALL the properties of `rawDataObj` into `this`
+  this.title = rawDataObj.title;
+  this.category = rawDataObj.category;
+  this.author = rawDataObj.author;
+  this.authorUrl = rawDataObj.authorUrl;
+  this.publishedOn = rawDataObj.publishedOn;
+  this.body = rawDataObj.body;
 }
 
 Article.prototype.toHtml = function() {
@@ -42,23 +42,17 @@ Article.prototype.toHtml = function() {
   $newArticle.find('.article-body').html(this.body);
 
 
-  // REVIEW: Display the date as a relative number of 'days ago'
+  // Done: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
   return $newArticle;
 };
 
 rawData.sort(function(a,b) {
-  // REVIEW: Take a look at this sort method; This may be the first time we've seen it. Look at the docs and think about how the dates would be sorted if the callback were not included in this method.
+  // Done: Take a look at this sort method; This may be the first time we've seen it. Look at the docs and think about how the dates would be sorted if the callback were not included in this method.
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
-
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i]));
-}
-
-for(let i = 0; i < articles.length; i++) {
-  $('#articles').append(articles[i].toHtml());
-}
+// Done: Refactor these for loops using the .forEach() array method.
+rawData.forEach(function(data_item){articles.push(new Article(data_item))});
+articles.forEach(function(article) {$('#articles').append(article.toHtml())})
